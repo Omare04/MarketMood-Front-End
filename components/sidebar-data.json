@@ -1,0 +1,50 @@
+{
+  "user": {
+    "name": "shadcn",
+    "email": "m@example.com",
+    "avatar": "/avatars/shadcn.jpg"
+  },
+  "navMain": [
+    {
+      "title": "Portfolio",
+      "url": "/portfolio",
+      "icon": "ChartCandlestick",
+      "isActive": true
+    },
+    {
+      "title": "Model Tracker",
+      "url": "#",
+      "icon": "Bot",
+      "items": [
+        { "title": "Stockpulse", "url": "/models/StockPulse" },
+        { "title": "BullsEye", "url": "/models/BullsEye" }
+      ]
+    },
+    {
+      "title": "Model Parameters",
+      "url": "#",
+      "icon": "SlidersHorizontal",
+      "items": [
+        { "title": "Genesis", "url": "/models/Genesis" },
+        { "title": "Explorer", "url": "/models/Explorer" },
+        { "title": "Quantum", "url": "/models/Quantum" }
+      ]
+    },
+    {
+      "title": "Settings",
+      "url": "#",
+      "icon": "Settings",
+      "items": [
+        { "title": "General", "url": "/settings/general" },
+        { "title": "Team", "url": "/settings/team" },
+        { "title": "Billing", "url": "/settings/billing" },
+        { "title": "Limits", "url": "/settings/limits" }
+      ]
+    }
+  ],
+  "navSecondary": [
+    { "title": "Support", "url": "/support", "icon": "LifeBuoy" },
+    { "title": "Feedback", "url": "/feedback", "icon": "Send" }
+  ],
+  "projects": []
+}

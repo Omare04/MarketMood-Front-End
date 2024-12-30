@@ -1,5 +1,14 @@
+"use client"
+import StockSummaryDrawer from "@/components/custom-components/model-trackers/drawer-component";
 import BullBearStockCard from "@/components/custom-components/StockCard";
-import React from "react";
+import React, {useState} from "react";
+
+
+const cardData = [
+  { title: "AAPL", score: 85.66, lastScraped: "Dec 26, 2024" },
+  { title: "TSLA", score: 38.20, lastScraped: "Dec 20, 2024" },
+  { title: "GOOGL", score: 92.45, lastScraped: "Dec 10, 2024" },
+];
 
 function StockpulsePage() {
   return (
@@ -19,13 +28,26 @@ function Main() {
   );
 }
 
-function BullBearContainer() {
+export function BullBearContainer() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardClick = (card: any) => {
+    setSelectedCard(card);
+    setDrawerOpen(true);
+  };
+
   return (
-    <div className="flex flex-col space-y-3 bg-zinc-950  rounded-lg">
-      <h1></h1>
-      <BullBearStockCard />
-      <BullBearStockCard />
-      <BullBearStockCard />
+    <div>
+      <div>Market Sentiment</div>
+      {cardData.map((card) => (
+        <BullBearStockCard
+          key={card.title}
+          data={card}
+          onClick={() => handleCardClick(card)}
+        />
+      ))}
+
     </div>
   );
 }
